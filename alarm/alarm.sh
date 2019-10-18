@@ -14,7 +14,9 @@ read e
 echo Music will be played on $e $c at $a : $b
 echo Enter directory of audiofile and name of file *.mp3
 read pt
-echo $b $a $c $e "*" $pt >>/home/sasha/myscripts/cron.txt
+echo prefix
+read p
+echo $b $a $c $e "*" $pt "#$p">>/home/sasha/myscripts/cron.txt
 crontab /home/sasha/myscripts/cron.txt
 fi
 if [ $m -eq 2 ]; then
